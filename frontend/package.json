@@ -1,0 +1,12 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "author": "WaleedAboHashima <waleedsabryyyy@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "vite": "^6.3.4",
+    "vite-plugin-pwa": "^1.0.0"
+  },
+  "devDependencies": {}
+}

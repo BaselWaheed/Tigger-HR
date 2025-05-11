@@ -1,0 +1,20 @@
+{
+  "name": "hrms_override",
+  "version": "1.0.0",
+  "author": "WaleedAboHashima <waleedsabryyyy@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "yarn install-pwa-deps && yarn install-roster-deps",
+    "install-pwa-deps": "cd ../hrms/frontend && yarn install --check-files",
+    "install-roster-deps": "cd ../hrms/roster && yarn install --check-files",
+    "dev-pwa": "cd ../hrms/frontend && yarn dev",
+    "dev-roster": "cd ../hrms/roster && yarn dev",
+    "build": "yarn build-pwa && yarn build-roster && yarn override",
+    "build-pwa": "cd ../hrms/frontend && yarn vite build --base=/assets/hrms/frontend/ --config ../../hrms_override/frontend/vite.config.ts && yarn copy-html-entry",
+    "build-roster": "cd ../hrms/roster && yarn build",
+    "override": "node ./frontend/override.js"
+  },
+  "dependencies": {
+    "vite-plugin-pwa": "^1.0.0"
+  }
+}
