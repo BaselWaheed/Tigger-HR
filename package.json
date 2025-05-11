@@ -1,5 +1,5 @@
 {
-  "name": "hrms_override",
+  "name": "trigger_hr",
   "version": "1.0.0",
   "author": "WaleedAboHashima <waleedsabryyyy@gmail.com>",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "dev-pwa": "cd ../hrms/frontend && yarn dev",
     "dev-roster": "cd ../hrms/roster && yarn dev",
     "build": "yarn build-pwa && yarn build-roster && yarn override",
-    "build-pwa": "cd ../hrms/frontend && yarn vite build --base=/assets/hrms/frontend/ --config ../../hrms_override/frontend/vite.config.ts && yarn copy-html-entry",
+    "build-pwa": "cd ../hrms/frontend && yarn vite build --base=/assets/hrms/frontend/ --config ../../trigger_hr/frontend/vite.config.ts && yarn copy-html-entry",
     "build-roster": "cd ../hrms/roster && yarn build",
     "override": "node ./frontend/override.js"
   },
